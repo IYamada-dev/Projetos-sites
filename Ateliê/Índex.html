@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IYamada-Dev — Alfaiataria de outro tempo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ink-overlay" id="inkOverlay"></div>
+
+<header>
+  <a class="brand" href="#" id="brandLink">IYamada-Dev</a>
+  <nav>
+    <button data-page="home" aria-current="page">Início</button>
+    <button data-page="catalogo">Catálogo</button>
+    <button data-page="pagamento">Pagamento</button>
+    <button data-page="contato">Contato</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <h1>IYamada-Dev</h1>
+      <p class="tagline">Alfaiataria autoral, à mão, como antigamente.</p>
+      <svg class="flourish" viewBox="0 0 260 18"><path d="M2,10 C40,2 60,16 100,9 S160,1 200,10 S240,15 258,8"/></svg>
+      <p class="lede">Cada peça nasce de um esboço a tinta antes de tocar o tecido. Trabalhamos em pequenos lotes, com tecidos nobres e acabamento inteiramente costurado à mão — um guarda-roupa pensado para durar gerações, não estações.</p>
+      <button class="cta" data-page="catalogo">Ver o catálogo</button>
+    </div>
+
+    <div class="home-grid">
+      <div class="item">
+        <h3>Sob medida</h3>
+        <p>Ajustes e encomendas exclusivas, discutidas em atendimento particular.</p>
+      </div>
+      <div class="item">
+        <h3>Tecidos selecionados</h3>
+        <p>Linho, seda e lã de fornecedores que conhecemos pelo nome.</p>
+      </div>
+      <div class="item">
+        <h3>Peças limitadas</h3>
+        <p>Pequenos lotes numerados — quando esgota, não volta ao molde.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO -->
+  <section class="page" id="page-catalogo">
+    <h2 class="page-title">Catálogo</h2>
+    <svg class="flourish" viewBox="0 0 260 18"><path d="M2,10 C40,2 60,16 100,9 S160,1 200,10 S240,15 258,8"/></svg>
+
+    <div class="carousel">
+      <button class="icon-btn" id="prevBtn" aria-label="Peça anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div class="stage">
+        <div class="track" id="track"></div>
+      </div>
+
+      <button class="icon-btn" id="nextBtn" aria-label="Próxima peça">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="dots" id="dots"></div>
+
+    <div class="catalog-list" id="catalogList"></div>
+  </section>
+
+  <!-- PAGAMENTO -->
+  <section class="page" id="page-pagamento">
+    <h2 class="page-title">Formas de pagamento</h2>
+    <svg class="flourish" viewBox="0 0 260 18"><path d="M2,10 C40,2 60,16 100,9 S160,1 200,10 S240,15 258,8"/></svg>
+    <p>Aceitamos os seguintes meios, na loja ou por encomenda combinada em atendimento:</p>
+
+    <div class="ticket-grid">
+      <div class="ticket">
+        <svg viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9 9-9z"/><path d="M8 12h8M12 8v8"/></svg>
+        <h3>Pix</h3>
+        <p>5% de desconto à vista. Confirmação enviada na hora.</p>
+      </div>
+      <div class="ticket">
+        <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M2.5 9.5h19"/></svg>
+        <h3>Cartão de crédito</h3>
+        <p>Em até 3x sem juros para peças a partir de R$ 300.</p>
+      </div>
+      <div class="ticket">
+        <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M6 15h4"/></svg>
+        <h3>Cartão de débito</h3>
+        <p>Débito à vista em todas as bandeiras principais.</p>
+      </div>
+      <div class="ticket">
+        <svg viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Dinheiro</h3>
+        <p>Pagamento em espécie diretamente no ateliê.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="page" id="page-contato">
+    <h2 class="page-title">Contato</h2>
+    <svg class="flourish" viewBox="0 0 260 18"><path d="M2,10 C40,2 60,16 100,9 S160,1 200,10 S240,15 258,8"/></svg>
+
+    <div class="postcard">
+      <div>
+        <p style="margin-top:0;">Atendimento por encomenda e visita agendada. Escreva, ligue ou nos encontre nas redes.</p>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2z"/></svg>
+          <a href="#">xxxxxxxxxxxxxxxx</a>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="stamp">— com carinho,<br>IYamada-Dev</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>IYamada-Dev — peças feitas à mão, sob encomenda.</footer>
+
+<script src="script.js"></script>
+</body>
+  </html>
+    
