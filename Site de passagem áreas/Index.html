@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IYamada-Dev | Passagens - Preço Fixo</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="plane-layer"><div class="cloud" id="cloud"></div><div class="plane" id="plane">✈️</div></div>
+<nav>
+  <b>IYAMADA-DEV</b>
+  <div id="menu">
+    <a data-target="home" class="active" onclick="goTo('home')">INÍCIO</a>
+    <a data-target="destinos" onclick="goTo('destinos')">DESTINOS & GASTRONOMIA</a>
+    <a data-target="valores" onclick="goTo('valores')">VALORES</a>
+    <a data-target="hoteis" onclick="goTo('hoteis')">HOTÉIS</a>
+  </div>
+</nav>
+<div id="home" class="page active">
+  <div class="hero">
+    <div class="content">
+      <h1>Voe<br>mais alto.</h1>
+      <p style="margin-top:14px;opacity:.85;max-width:520px">Passagens + hospedagem + gastronomia local em um só lugar.</p>
+      <button class="btn btn-white" onclick="goTo('destinos')" style="margin-top:18px;padding:14px 28px">Explorar catálogo →</button>
+    </div>
+  </div>
+  <div class="search-box">
+    <select><option>GRU - São Paulo</option></select>
+    <select><option>Destino - Tóquio 🇯🇵</option><option>Helsinki 🇫🇮</option><option>Reine 🇳🇴</option><option>Paris 🇫🇷</option><option>NYC 🇺🇸</option><option>Dubai 🇦🇪</option></select>
+    <input type="date">
+    <input type="number" placeholder="1 passageiro">
+    <button class="search-btn" onclick="goTo('valores')">Buscar voos</button>
+  </div>
+</div>
+<div id="destinos" class="page">
+  <h2 style="font-size:4vw">Catálogo de viagens & pratos típicos</h2>
+  <p style="color:#64748b;margin:8px 0">Explore destinos e descubra a gastronomia de cada país.</p>
+  <div class="grid" id="grid-dest"></div>
+</div>
+<div id="valores" class="page">
+  <h2 style="font-size:3vw;margin-bottom:12px">Tarifas GRU - Preço Fixo</h2>
+  <p style="color:#64748b;margin-bottom:12px;font-size:13px">🔒 Valores fixos - ninguém consegue alterar</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>ROTA</th><th>PAÍS</th><th>IDA</th><th>VOLTA</th><th>TAXAS</th></tr>
+      <tr><td>Tóquio (NRT)</td><td>🇯🇵 Japão</td><td>R$ 3.890</td><td>R$ 3.750</td><td>R$ 420</td></tr>
+      <tr><td>Helsinki (HEL)</td><td>🇫🇮 Finlândia</td><td>R$ 3.290</td><td>R$ 3.150</td><td>R$ 380</td></tr>
+      <tr><td>Reine (OSL)</td><td>🇳🇴 Noruega</td><td>R$ 3.450</td><td>R$ 3.300</td><td>R$ 390</td></tr>
+      <tr><td>Paris (CDG)</td><td>🇫🇷 França</td><td>R$ 2.890</td><td>R$ 2.750</td><td>R$ 310</td></tr>
+      <tr><td>NYC (JFK)</td><td>🇺🇸 EUA</td><td>R$ 2.590</td><td>R$ 2.450</td><td>R$ 290</td></tr>
+      <tr><td>Dubai (DXB)</td><td>🇦🇪 EAU</td><td>R$ 3.120</td><td>R$ 2.980</td><td>R$ 350</td></tr>
+    </table>
+  </div>
+  <div style="margin-top:18px;background:#fff;border:1px dashed var(--border);border-radius:16px;padding:18px">
+    <b>Compra de passagem</b>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:12px">
+      <input placeholder="Nome" style="padding:12px;border:1px solid var(--border);border-radius:12px">
+      <input placeholder="WhatsApp" style="padding:12px;border:1px solid var(--border);border-radius:12px">
+      <select style="padding:12px;border:1px solid var(--border);border-radius:12px"><option>Tóquio 🇯🇵</option><option>Helsinki 🇫🇮</option><option>Reine 🇳🇴</option></select>
+      <button class="btn" onclick="alert('Reserva enviada!')">Finalizar compra</button>
+    </div>
+  </div>
+</div>
+<div id="hoteis" class="page">
+  <h2 style="font-size:3vw">Hospedagem</h2>
+  <div class="grid" id="grid-hoteis"></div>
+  <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;margin-top:20px">
+    <h4>Minhas reservas</h4>
+    <div id="minhas-reservas" style="margin-top:8px;color:#64748b">Nenhuma ainda.</div>
+  </div>
+</div>
+<div class="modal" id="modal"><div class="modal-box" id="modal-box"></div></div>
+<footer><strong style="color:#fff">IYAMADA-DEV</strong> — ✈️ <em>"obrigado por voarem conosco"</em></footer>
+<script src="script.js"></script>
+</body>
+</html>
